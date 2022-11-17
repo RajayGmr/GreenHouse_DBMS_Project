@@ -1,0 +1,29 @@
+This is the instruction manual for setting up
+our team's glass house App in any pc:
+
+1)This app.zip file has to be extracted in a new folder (naming it "GlassHouse_cart)" 
+inside the location :(XAMPP-->htdocs)
+
+since our codes are php
+
+
+2)This zip file contains a text file named:[  3tables.txt  ]
+-->It contains the sql commands for making three tables(cart,orders,product)
+--->which can be copy-pasted in phpmyadmin(localhost) 
+by creating a new databse called " shopping_cart"
+
+
+3)The first file to be accessed is "pro.php"
+---this can be accessed by going to a web browser and 
+typing: localhost/GlassHouse_cart/pro.php
+
+this will direct the user to homepage which is the (testing.php)
+5)Consequently,otherwebpages can be accessed as it is all linked to each other
+
+6)There is another DB created called list 
+and it has 2 tables,which is 
+the customers and gardeners(the file called 2Tables.txt has the insertion codes)
+
+7)There is another DB called test_db
+-->this contains a table called "users"(users.php)
+-->the codes for the table is saved in a text file called test_db

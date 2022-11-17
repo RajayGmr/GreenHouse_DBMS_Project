@@ -1,0 +1,145 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `shopping_cart`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `product_price` varchar(50) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `qty` int(10) NOT NULL,
+  `total_price` varchar(100) NOT NULL,
+  `product_code` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `pmode` varchar(50) NOT NULL,
+  `products` varchar(255) NOT NULL,
+  `amount_paid` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `id` int(11) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `product_price` varchar(100) NOT NULL,
+  `product_qty` int(11) NOT NULL DEFAULT 1,
+  `product_image` varchar(255) NOT NULL,
+  `product_code` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `product_name`, `product_price`, `product_qty`, `product_image`, `product_code`) VALUES
+(1, 'Mushroom Plant', '1500', 1, 'images/mushroom.jpg', 'p1000'),
+(2, ' "In the Mood" Rose', '200', 1, 'images/rose.jpg', 'p1001'),
+(3, 'Croton Plant', '290', 1, 'images/croton.jpg', 'p1002'),
+(4, 'Boston Fern', '300', 1, 'images/bostonFern.jpg', 'p1003'),
+(5, 'Snake Plant', '305', 1, 'images/snake.jpg', 'p1004'),
+(6, 'Devil ivy', '400', 1, 'images/devilsIvy.jpg', 'p1005'),
+(7, 'Hydrilla', '290', 1, 'images/hydrilla.jpg', 'p1006'),
+(8, 'Peace Lily', '350', 1, 'images/peaceLily.jpg', 'p1007'),
+(9, 'Bunny ear cactus', '790', 1, 'images/cactus.jpg', 'p1008'),
+(10, 'Jade', '700', 1, 'images/jade.jpg', 'p1009'),
+
+(11, 'Fresh Big Mango', '50', 1, 'images/mango.jpg', 'p1010'),
+(12, ' Wonderland Grapes', '140', 1, 'images/grape.jpg', 'p1011'),
+(13, 'Melon', '100', 1, 'images/melon.jpg', 'p1012'),
+(14, 'Mangosteen', '100', 1, 'images/mangosteen.jpg', 'p1013'),
+(15, 'The Killer Kiwi', '65', 1, 'images/Kiwi.jpg', 'p1014'),
+(16, 'Strawberry', '100', 1, 'images/strawberry.jpg', 'p1015'),
+(17, 'Mango', '290', 1, 'images/mango.jpg', 'p1016'),
+(18, 'Orange', '150', 1, 'images/orange.jpg', 'p1017'),
+(19, 'Peachy peach', '90', 1, 'images/peach.jpg', 'p1018'),
+(20, 'Rambutan', '100', 1, 'images/rambutan.jpg', 'p1019'),
+
+
+(21, 'The super Axe', '350', 1, 'images/axe.jpg', 'p1020'),
+(22, ' Hedge shears', '240', 1, 'images/shears.jpg', 'p1021'),
+(23, 'Gardening Fork', '100', 1, 'images/gardeningFork.jpg', 'p1022'),
+(24, 'Sickle', '90', 1, 'images/sickle.jpg', 'p1023'),
+(25, 'Pruning Saw', '85', 1, 'images/saw.jpg', 'p1024'),
+(26, 'The Shovel', '130', 1, 'images/shovel.jpg', 'p1025'),
+(27, 'Fertilizer', '190', 1, 'images/fertilizer.jpg', 'p1026');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `product_code_2` (`product_code`),
+  ADD KEY `product_code` (`product_code`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;

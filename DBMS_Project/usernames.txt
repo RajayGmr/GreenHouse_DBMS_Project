@@ -1,0 +1,6 @@
+INSERT INTO `users` (`id`, `user_name`, `password`, `name`) VALUES
+(6, 'Aish', 'aish12', 'Aish'),
+(7, 'rayan', 'rayan13', 'rayan'),
+(8, 'mary', 'mary14', 'mary'),
+(9, 'hasan', 'hasan14', 'hasan'),
+(10, 'alden', 'alden14', 'Alden');

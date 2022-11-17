@@ -1,0 +1,39 @@
+customers table
+
+INSERT INTO customers (`Name`, `Id`,  `Gender`, `Mobile Number`) 
+VALUES ('Rohan', '1', 'M','09-35-230-253'),('Maya', '2', 'F','09-45-130-161'),
+('Leen', '3', 'F','09-64-225-670'),('Alishba', '4', 'F','09-45-420-876'),
+ ('kofee', '5', 'F','08-73-834-451'),('Arfan', '6', 'M','09-78-774-751'),
+ ('Natasha', '7', 'F','08-45-430-441'),('Aneeq', '8', 'M','09-85-750-753'),
+ 
+ ('rajay', '9', 'M','09-38-843-583'),('Hyder', '10', 'M','09-63-262-352'),
+('shupti', '11', 'F','08-33-136-631'),('Asfana', '12', 'F','08-42-620-630'),
+ ('Ebrah', '13', 'M','09-21-630-257'),('Rasheda', '14', 'F','09-24-725-035'),
+ 
+ 
+ ('Christopher', '15', 'M','09-95-830-751'),('Shepro', '16', 'M','09-15-512-751'),
+ ('Tazrian', '17', 'F','09-34-330-751'),('Shaafi', '18', 'M','09-51-444-751'),
+ ('Tasfia', '19', 'F','08-11-132-751'),('Neha', '20', 'F','09-44-034-751');
+
+
+
+
+gardeners  table
+
+INSERT INTO `gardeners` 
+(`Name`, `Id`, `Birthdate`, `Address`, `Joined year`, `Salary`) 
+VALUES ('Anas', '1001', '1999-03-29', 'Grilled Town', '2020', '24000'), 
+('Asfana', '1002', '2005-07-04', 'Sukhumvit 55,thonglor soi 18,
+Tower B', '2021', '19000')
+,('Alicia', '1003', '1987-03-29', 'Sukhumvit soi 71,Nich apartment', '2019', '27000'), 
+('Amna', '1004', '1999-07-04', 'pattaya city,gracious apartment', '20120', '28000'),
+('Anika', '1005', '1987-03-29', 'Ramkamhaeng,huamak', '2018', '27000'), 
+('Pranto', '1006', '1999-08-09', 'Onnut Road,streetsvalley', '2020', '14000'),
+('Deepti', '1007', '2000-03-29', 'Sukhumvit 55,clover apartment', '2019', '27000'), 
+('Preeyarat', '1008', '20002-08-20', 'Taipeng tower', '2019', '8000'),
+('Mashfy', '1009', '1999-08-21', 'Victory monument road,janicia hub', '2018', '29000'),
+('Sadad', '1010', 'Luxary condo ,near bts nana', '2017', '2019', '8000'),
+('Ayaaz', '1011', '1997-08-21', 'Phuket city,nanaria apartment', '2019', '9000'),
+('Amna', '1012', '1999-07-04', 'pattaya city,gracious apartment', '20120', '8000');
+
+
